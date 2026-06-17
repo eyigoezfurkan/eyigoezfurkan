@@ -37,7 +37,7 @@ body {
 
 .logo {
   display: block;
-  height: clamp(50px, 8vw, 80px);
+  height: clamp(90px, 14vw, 150px);
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
 }
 
