@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İlim Suâlleri — Soru Cevap Sistemi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="title-block">
+        <h1>İlim Suâlleri</h1>
+        <p class="subtitle">Mantık · Usul-i Fıkıh · Kelam — Soru Cevap Sistemi</p>
+      </div>
+      <button id="themeToggle" class="icon-btn" title="Tema değiştir" aria-label="Tema değiştir">🌙</button>
+    </div>
+  </header>
+
+  <nav class="controls">
+    <div class="category-tabs" id="categoryTabs"></div>
+    <div class="mode-tabs">
+      <button class="mode-btn active" data-mode="list">📋 Liste</button>
+      <button class="mode-btn" data-mode="quiz">🎴 Kart Çalışma</button>
+    </div>
+  </nav>
+
+  <main id="app">
+    <section id="listView" class="view">
+      <div class="search-bar">
+        <input type="search" id="searchInput" placeholder="Soru veya cevap içinde ara...">
+        <span id="resultCount" class="result-count"></span>
+      </div>
+      <div id="questionList" class="question-list"></div>
+    </section>
+
+    <section id="quizView" class="view hidden">
+      <div class="quiz-toolbar">
+        <label class="toggle">
+          <input type="checkbox" id="onlyReviewToggle">
+          Sadece tekrar edilecekler
+        </label>
+        <button id="restartQuiz" class="btn-secondary">🔀 Karıştır / Yeniden Başlat</button>
+        <div class="quiz-stats" id="quizStats"></div>
+      </div>
+      <div id="quizCardWrap"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Toplam <strong id="totalCount">0</strong> soru · İlerlemeniz tarayıcınızda saklanır.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
