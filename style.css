@@ -8,7 +8,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background:
+    linear-gradient(180deg, rgba(6, 18, 26, 0.6), rgba(6, 18, 26, 0.82)),
+    url('assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   font-family: 'Poppins', sans-serif;
   color: #fff;
   padding: 24px;
@@ -16,66 +21,93 @@ body {
 
 .countdown-card {
   width: 100%;
-  max-width: 900px;
+  max-width: 1000px;
   text-align: center;
 }
 
+.logo-wrap {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 20px;
+  padding: 14px 28px;
+  margin-bottom: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.logo {
+  display: block;
+  height: clamp(50px, 8vw, 80px);
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+}
+
 .title {
-  font-size: clamp(2rem, 6vw, 3.5rem);
-  font-weight: 900;
+  font-size: clamp(1.6rem, 4.5vw, 2.6rem);
+  font-weight: 800;
   letter-spacing: 2px;
   text-transform: uppercase;
-  margin: 0 0 16px;
+  margin: 0 0 14px;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .divider {
   height: 3px;
-  width: 60%;
-  margin: 0 auto 40px;
+  width: 50%;
+  margin: 0 auto 36px;
   background: linear-gradient(90deg, transparent, #fff, transparent);
+  opacity: 0.8;
 }
 
 .timer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 16px;
   flex-wrap: wrap;
   margin-bottom: 32px;
 }
 
 .time-box {
-  border: 2px solid rgba(255, 255, 255, 0.5);
-  border-radius: 16px;
-  padding: 16px 22px;
-  min-width: 90px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  border-radius: 22px;
+  padding: 24px 30px;
+  min-width: 120px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
 }
 
 .time-box span {
   display: block;
-  font-size: clamp(2.5rem, 8vw, 4rem);
-  font-weight: 800;
+  font-size: clamp(3.2rem, 11vw, 6rem);
+  font-weight: 900;
   line-height: 1;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.55);
 }
 
 .time-box label {
   display: block;
-  margin-top: 8px;
-  font-size: 0.9rem;
+  margin-top: 10px;
+  font-size: 1rem;
   letter-spacing: 2px;
   font-weight: 600;
-  opacity: 0.85;
+  opacity: 0.9;
+}
+
+.seconds-box {
+  border-color: rgba(255, 77, 109, 0.7);
 }
 
 .seconds-box span {
-  color: #ff3b5c;
+  color: #ff4d6d;
+  text-shadow: 0 0 24px rgba(255, 77, 109, 0.6);
 }
 
 .colon {
-  font-size: clamp(2rem, 6vw, 3rem);
+  font-size: clamp(2.2rem, 7vw, 3.5rem);
   font-weight: 700;
-  margin-bottom: 28px;
-  opacity: 0.8;
+  margin-bottom: 38px;
+  opacity: 0.75;
 }
 
 .date-display {
@@ -85,7 +117,8 @@ body {
   padding: 8px 24px;
   font-weight: 600;
   letter-spacing: 1px;
-  margin-bottom: 28px;
+  margin-bottom: 24px;
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .banner {
@@ -96,18 +129,18 @@ body {
   font-weight: 700;
   font-size: 1.1rem;
   letter-spacing: 1px;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(6px);
 }
 
 @media (max-width: 520px) {
   .timer {
-    gap: 8px;
+    gap: 10px;
   }
   .time-box {
-    padding: 12px 14px;
-    min-width: 70px;
+    padding: 16px 16px;
+    min-width: 80px;
   }
   .colon {
-    margin-bottom: 20px;
+    margin-bottom: 26px;
   }
 }
